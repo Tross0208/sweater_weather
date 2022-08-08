@@ -10,7 +10,7 @@ RSpec.describe "Forecast serializer" do
     @all_weather = {current: @current, hourly: @hourly, daily: @daily}
 
     forecast = Api::V1::ForecastSerializer.forecast_index_serializer(@all_weather)
-
+    
     expect(forecast).to be_a(Hash)
     expect(forecast[:data][:attributes][:current_weather]).to be_a(Hash)
     expect(forecast[:data][:attributes][:daily_weather].count).to eq(5)

@@ -39,7 +39,7 @@ RSpec.describe "Weather Facade" do
 
     expect(@hourly.count).to eq(8)
     expect(first_hour.temperature).to be_an(Integer)
-    expect(first_hour.datetime).to be_a(Time)
+    expect(first_hour.time).to be_a(String)
     expect(first_hour.icon).to be_a(String)
     expect(first_hour.conditions).to be_a(String)
   end

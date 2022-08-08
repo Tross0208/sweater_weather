@@ -20,7 +20,7 @@ RSpec.describe "Hourly Weather PORO" do
     @hourly = HourlyWeather.new(json)
 
     expect(@hourly.temperature).to eq(64)
-    expect(@hourly.datetime).to eq("2022-08-08 01:00:00 -0500")
+    expect(@hourly.time).to eq("01:00:00")
     expect(@hourly.icon).to eq("04n")
     expect(@hourly.conditions).to eq("overcast clouds")
   end

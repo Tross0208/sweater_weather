@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-08T02:33:43-05:00">2022-08-08T02:33:43-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-08T02:58:36-05:00">2022-08-08T02:58:36-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1093,7 +1093,7 @@
 
             
 
-            <code class="ruby">  attr_reader :datetime, :temperature, :conditions, :icon</code>
+            <code class="ruby">  attr_reader :time, :temperature, :conditions, :icon</code>
           </li>
         </div>
       
@@ -1126,7 +1126,7 @@
 
             
 
-            <code class="ruby">    @datetime = Time.at(hourly_weather[:dt])</code>
+            <code class="ruby">    @time = Time.at(hourly_weather[:dt]).strftime(&quot;%H:%M:%S&quot;)</code>
           </li>
         </div>
       
@@ -1641,7 +1641,7 @@
 
             
 
-            <code class="ruby">              time: hourly.datetime,</code>
+            <code class="ruby">              time: hourly.time,</code>
           </li>
         </div>
       
@@ -4834,7 +4834,7 @@
 
             
 
-            <code class="ruby">    expect(first_hour.datetime).to be_a(Time)</code>
+            <code class="ruby">    expect(first_hour.time).to be_a(String)</code>
           </li>
         </div>
       
@@ -5961,7 +5961,7 @@
 
             
 
-            <code class="ruby">    expect(@hourly.datetime).to eq(&quot;2022-08-08 01:00:00 -0500&quot;)</code>
+            <code class="ruby">    expect(@hourly.time).to eq(&quot;01:00:00&quot;)</code>
           </li>
         </div>
       
@@ -7068,7 +7068,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    </code>
           </li>
         </div>
       

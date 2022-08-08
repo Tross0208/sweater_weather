@@ -35,7 +35,7 @@ module Api
           hourly_weather:
             data[:hourly].map do |hourly|
             {
-              time: hourly.datetime,
+              time: hourly.time,
               temperature: hourly.temperature,
               conditions: hourly.conditions,
               icon: hourly.icon
