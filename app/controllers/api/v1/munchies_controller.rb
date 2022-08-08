@@ -6,8 +6,8 @@ module Api
           location = MapFacade.get_coords(params[:location])
           if location != "error"
             restaurant = MunchiesFacade.get_restaurant(params[:location], params[:food])
-            weather = WeatherFacade.get_weather(location)      
-            render json: Api::V1::MunchiesController::MunchiesSerializer.serialize_munchies(restaurant, weather)
+            weather = WeatherFacade.get_weather(location)
+            render json: Api::V1::MunchiesSerializer.serialize_munchies(restaurant, weather)
           else
             render status: 404
           end
