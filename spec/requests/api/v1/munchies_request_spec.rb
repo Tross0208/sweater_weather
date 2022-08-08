@@ -25,4 +25,9 @@ RSpec.describe "Munchies Request" do
     response = get "/api/v1/munchies?location=denver,co"
     expect(response).to eq(404)
   end
+
+  it 'rejects requests with unknown location' do
+    response = get "/api/v1/munchies?location=qwertyuiop&food=chinese"
+    expect(response).to eq(404)
+  end
 end
