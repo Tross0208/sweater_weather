@@ -30,4 +30,10 @@ RSpec.describe "Munchies Request" do
     response = get "/api/v1/munchies?location=qwertyuiop&food=chinese"
     expect(response).to eq(404)
   end
+
+  xit 'rejects requests with unknown food' do
+    #attempting to sad path test, all strings tested return a restaurant
+    response = get "/api/v1/munchies?location=denver,co&food=qweasdzxc"
+    expect(response).to eq(404)
+  end
 end
