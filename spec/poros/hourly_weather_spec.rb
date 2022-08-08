@@ -22,6 +22,6 @@ RSpec.describe "Hourly Weather PORO" do
     expect(@hourly.temperature).to eq(64)
     expect(@hourly.datetime).to eq("2022-08-08 01:00:00 -0500")
     expect(@hourly.icon).to eq("04n")
-    expect(@hourly.conditions).to eq("overcast_clouds")
+    expect(@hourly.conditions).to eq("overcast clouds")
   end
 end
