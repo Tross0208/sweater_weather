@@ -1,5 +1,5 @@
 class MunchiesService
-  def self.get_restuarants(location, food)
+  def self.get_restaurants(location, food)
     response = conn.get("businesses/search?location=#{location}&categories=#{food}")
     get_json(response)
   end

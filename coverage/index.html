@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-08T11:00:32-05:00">2022-08-08T11:00:32-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-08T11:13:29-05:00">2022-08-08T11:13:29-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.21%
+  97.33%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.61
+         2.57
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>31</b> files in total.
+    <b>33</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>251</b> relevant lines,
-    <span class="green"><b>244</b> lines covered</span> and
+    <b>262</b> relevant lines,
+    <span class="green"><b>255</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed. </span>
     (<span class="green">
-  97.21%
+  97.33%
 </span>
 )
   </div>
@@ -69,6 +69,17 @@
         </tr>
       </thead>
       <tbody>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#72888aa14cbfaa6c19e90c13fa55abe57da446ee" class="src_link" title="app/facades/munchies_facade.rb">app/facades/munchies_facade.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#c93e1c3e2555bf9bf56d5271f0ce30efce56e1d2" class="src_link" title="app/facades/weather_facade.rb">app/facades/weather_facade.rb</a></td>
@@ -121,7 +132,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.40</td>
             
           </tr>
         
@@ -154,7 +165,7 @@
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.56</td>
             
           </tr>
         
@@ -302,6 +313,17 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#ed93f2655c26c06b752305361281171f0f8e6149" class="src_link" title="spec/facades/munchies_facade_spec.rb">spec/facades/munchies_facade_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#119978c521eb635ae5af90aef7d86fea6bdb76ed" class="src_link" title="spec/facades/weather_facade_spec.rb">spec/facades/weather_facade_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">46</td>
@@ -427,6 +449,103 @@
       </div>
 
       <div class="source_files">
+      
+        <div class="source_table" id="72888aa14cbfaa6c19e90c13fa55abe57da446ee">
+  <div class="header">
+    <h3>app/facades/munchies_facade.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class MunchiesFacade</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.get_restaurant(location, food)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    data = MunchiesService.get_restaurants(location, food)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    restaurant = Munchies.new(data[:businesses].first)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="c93e1c3e2555bf9bf56d5271f0ce30efce56e1d2">
   <div class="header">
@@ -1327,8 +1446,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="6">
+            <span class="hits">2</span>
             
 
             
@@ -1338,8 +1457,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="7">
+            <span class="hits">2</span>
             
 
             
@@ -2207,13 +2326,13 @@
 
             
 
-            <code class="ruby">  def self.get_restuarants(location, food)</code>
+            <code class="ruby">  def self.get_restaurants(location, food)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="3">
+            <span class="hits">2</span>
             
 
             
@@ -2223,8 +2342,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
 
             
@@ -2267,8 +2386,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="8">
+            <span class="hits">2</span>
             
 
             
@@ -2311,8 +2430,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
             
 
             
@@ -2322,8 +2441,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="13">
+            <span class="hits">2</span>
             
 
             
@@ -4731,6 +4850,169 @@
 </div>
 
       
+        <div class="source_table" id="ed93f2655c26c06b752305361281171f0f8e6149">
+  <div class="header">
+    <h3>spec/facades/munchies_facade_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>7</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;rails_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &quot;Munchies Facade&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;gets one restaurant poro&#39;, :vcr do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    restaurant = MunchiesFacade.get_restaurant(&quot;denver, co&quot;, &quot;chinese&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(restaurant.name).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(restaurant.address).to be_a(String)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(restaurant).to be_a(Munchies)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="119978c521eb635ae5af90aef7d86fea6bdb76ed">
   <div class="header">
     <h3>spec/facades/weather_facade_spec.rb</h3>
@@ -6450,7 +6732,7 @@
 
             
 
-            <code class="ruby">RSpec.describe &quot;Hourly Weather PORO&quot; do</code>
+            <code class="ruby">RSpec.describe &quot;Munchies PORO&quot; do</code>
           </li>
         </div>
       
@@ -6461,7 +6743,7 @@
 
             
 
-            <code class="ruby">  it &#39;creates hourly weather poro from json&#39; do</code>
+            <code class="ruby">  it &#39;creates restaurant poro from json&#39; do</code>
           </li>
         </div>
       
@@ -8202,7 +8484,7 @@
 
             
 
-            <code class="ruby">  it &quot;gets weather forecast&quot; do</code>
+            <code class="ruby">  it &quot;gets restaurants&quot; do</code>
           </li>
         </div>
       
@@ -8213,7 +8495,7 @@
 
             
 
-            <code class="ruby">    json = MunchiesService.get_restuarants(&quot;denver, co&quot;, &quot;chinese&quot;)</code>
+            <code class="ruby">    json = MunchiesService.get_restaurants(&quot;denver, co&quot;, &quot;chinese&quot;)</code>
           </li>
         </div>
       

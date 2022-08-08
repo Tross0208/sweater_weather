@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Hourly Weather PORO" do
-  it 'creates hourly weather poro from json' do
+RSpec.describe "Munchies PORO" do
+  it 'creates restaurant poro from json' do
     json = {:id=>"6kRbrLNIZKZ1fcjgsTFobg",
         :alias=>"fortune-wok-to-table-denver",
         :name=>"Fortune Wok to Table",
