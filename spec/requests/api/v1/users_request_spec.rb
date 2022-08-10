@@ -10,10 +10,13 @@ RSpec.describe "Users Request" do
             }
 
     post '/api/v1/users', headers: header, params: JSON.generate(body)
-    #response_body = JSON.parse(response.body, symbolize_names: true)
-
+    response_body = JSON.parse(response.body, symbolize_names: true)
+    
     expect(response.status).to eq(201)
     expect(User.last.email).to eq("tim@mail.com")
+    expect(response_body[:data][:id]).to be_an(Integer)
+    expect(response_body[:data][:attributes][:email]).to eq("tim@mail.com")
+    expect(response_body[:data][:attributes][:api_key]).to be_a(String)
   end
 
   it 'rejects blank email' do
