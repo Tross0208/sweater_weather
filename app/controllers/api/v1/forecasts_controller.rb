@@ -1,7 +1,7 @@
 module Api
   module V1
     class ForecastsController < ApplicationController
-      def index
+      def search
         if params[:location]
           location = MapFacade.get_coords(params[:location])
           weather = WeatherFacade.get_weather(location)
@@ -12,4 +12,4 @@ module Api
       end
     end
   end
-end 
+end
