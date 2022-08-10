@@ -1,4 +1,9 @@
 class MapService
+  def self.get_route(origin, destination)
+    response = conn.get("/directions/v2/route?from=#{origin}&to=#{destination}")
+    get_json(response)
+  end
+
   def self.get_coords(location)
     response = conn.get("/geocoding/v1/address?&location=#{location}")
     get_json(response)

@@ -19,4 +19,11 @@ class WeatherFacade
     weather_data[:daily][1..5].map {|day| DailyWeather.new(day)}
   end
 
+  def self.get_destination_weather(trip)
+    coords = MapFacade.get_coords(trip.destination)
+    weather = WeatherService.get_weather(coords[:lat], coords[:lng])
+    if trip.time_to_hours.round <= 48
+      destination_weather = HourlyWeather.new(weather[:hourly][trip.time_to_hours.round - 1])
+    end
+  end
 end

@@ -7,7 +7,6 @@ module Api
         if @validation == "Validated"
           new_user = User.create(user_params)
           new_user.update(api_key: :"#{SecureRandom.hex}")
-
           render json: Api::V1::UserSerializer.serialize_user(new_user), status: 201
         elsif @validation == "Password does not match password confirmation"
           render json: { error: "#{@validation}" }, status: 404

@@ -7,4 +7,9 @@ class MapFacade
       return data[:results].first[:locations].first[:latLng]
     end
   end
+
+  def self.get_trip(origin, destination)
+    route = MapService.get_route(origin, destination)
+    trip = Roadtrip.new(route, origin, destination)
+  end
 end
