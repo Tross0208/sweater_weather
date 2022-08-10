@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/munchies', to: 'munchies#search'
       post '/users', to: 'users#create'
+      post '/sessions', to: 'sessions#create'
     end
   end
 end

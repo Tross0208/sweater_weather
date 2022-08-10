@@ -1,7 +1,7 @@
 module Api
   module V1
     class UserSerializer
-      def self.serialize_new_user(user)
+      def self.serialize_user(user)
         {
           "data": {
             "type": "users",
