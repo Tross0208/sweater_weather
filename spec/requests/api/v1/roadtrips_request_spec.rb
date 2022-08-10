@@ -60,4 +60,32 @@ RSpec.describe "Roadtrips Request" do
     expect(response_body[:data][:attributes][:weather_at_eta][:temperature]).to eq("")
     expect(response_body[:data][:attributes][:weather_at_eta][:conditions]).to eq("")
   end
+
+  it 'rejects bad api key' do
+    User.create(email: "tim@example.com", password: "password", api_key: "buncharandomchars")
+    header = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    body = {
+            "origin": "Syracuse, NY",
+            "destination": "London, UK",
+            "api_key": "bad"
+            }
+
+    post '/api/v1/road_trip', headers: header, params: JSON.generate(body)
+
+    expect(response.status).to eq(401)
+  end
+
+  it 'rejects missing api key' do
+    User.create(email: "tim@example.com", password: "password", api_key: "buncharandomchars")
+    header = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    body = {
+            "origin": "Syracuse, NY",
+            "destination": "London, UK",
+            "api_key": ""
+            }
+
+    post '/api/v1/road_trip', headers: header, params: JSON.generate(body)
+
+    expect(response.status).to eq(401)
+  end
 end

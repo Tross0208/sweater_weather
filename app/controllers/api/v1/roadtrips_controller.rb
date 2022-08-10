@@ -7,7 +7,9 @@ module Api
           trip = MapFacade.get_trip(roadtrip_params[:origin], roadtrip_params[:destination])
           forecast = WeatherFacade.get_destination_weather(trip)
           render json: Api::V1::RoadtripSerializer.serialize_roadtrip(forecast, trip)
-        end 
+        else
+          render status: 401
+        end
       end
       private
         def roadtrip_params
