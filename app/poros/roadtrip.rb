@@ -1,5 +1,6 @@
 class Roadtrip
   attr_reader :travel_time, :origin, :destination
+  attr_accessor :travel_time
 
   def initialize(route, origin, destination)
 

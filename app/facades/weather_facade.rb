@@ -22,8 +22,13 @@ class WeatherFacade
   def self.get_destination_weather(trip)
     coords = MapFacade.get_coords(trip.destination)
     weather = WeatherService.get_weather(coords[:lat], coords[:lng])
-    if trip.time_to_hours.round <= 48
+    if trip.travel_time == nil
+      trip.travel_time = "Impossible"
+      destination_weather = BlankWeather.new
+    elsif trip.time_to_hours.round <= 48
       destination_weather = HourlyWeather.new(weather[:hourly][trip.time_to_hours.round - 1])
+    elsif trip.time_to_hours.round > 48
+      destination_weather = DailyWeather.new(weather[:daily][(trip.time_to_hours/24).round - 1])
     end
   end
 end
