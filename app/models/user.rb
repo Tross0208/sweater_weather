@@ -4,15 +4,16 @@ class User < ApplicationRecord
 
   has_secure_password
   def self.validate_user(user_data)
-    validate_password(user_data) && validate_email(user_data)
+    if user_data[:password] != user_data[:password_confirmation]
+      return "Password does not match password confirmation"
+    elsif user_data[:password].length == 0
+      return "No password provided"
+    elsif user_data[:email].length == 0
+      return "No email provided"
+    elsif User.find_by(email: user_data[:email])
+      return "Email has already been registered"
+    else
+      return "Validated"
+    end
   end
-
-  def self.validate_password(user_data)
-    (user_data[:password] == user_data[:password_confirmation]) && (user_data[:password].length > 0)
-  end
-
-  def self.validate_email(user_data)
-    (user_data[:email].length > 0) && !(User.find_by(email: user_data[:email]))
-  end
-
 end
