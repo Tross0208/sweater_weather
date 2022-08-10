@@ -2,12 +2,12 @@ module Api
   module V1
     class UsersController < ApplicationController
       def create
-      
+
         if User.validate_user(user_params)
           new_user = User.create(user_params)
           render status: 201
-        #else
-          #render :json { error: "Invalid information provided" }
+        else
+          render status: 404
         end
       end
 
