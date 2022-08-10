@@ -359,13 +359,14 @@
           null,
           null,
           1,
-          0,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -657,8 +658,8 @@
           1,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
           null
@@ -669,11 +670,11 @@
           1,
           1,
           2,
-          1,
+          2,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
@@ -711,10 +712,10 @@
           1,
           null,
           1,
-          8,
-          8,
-          8,
-          8,
+          9,
+          9,
+          9,
+          9,
           null,
           null,
           null
@@ -805,7 +806,7 @@
           1,
           1,
           1,
-          0,
+          1,
           null,
           1,
           1,
@@ -829,8 +830,35 @@
           null,
           null,
           1,
-          0,
-          0,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/pistachiojoe/turing/3mod2/proj/sweat/sweater_weather/app/serializers/api/v1/roadtrip_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -915,6 +943,6 @@
         ]
       }
     },
-    "timestamp": 1660133116
+    "timestamp": 1660133512
   }
 }
