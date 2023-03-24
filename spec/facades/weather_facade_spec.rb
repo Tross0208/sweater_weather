@@ -19,7 +19,7 @@ RSpec.describe "Weather Facade" do
     expect(@current.conditions).to be_a(String)
     expect(@current.visibility).to be_an(Integer)
     expect(@current.humidity).to be_an(Integer)
-    expect(@current.uvi).to be_an(Integer)
+    expect(@current.uvi).to be_an(Float)
   end
 
   it 'gets daily weather', :vcr do

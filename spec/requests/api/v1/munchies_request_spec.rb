@@ -7,6 +7,7 @@ RSpec.describe "Munchies Request" do
     forecast = response_body[:data][:attributes][:forecast]
     restaurant = response_body[:data][:attributes][:restaurant]
 
+
     expect(response.status).to eq(200)
     expect(response_body[:data][:attributes].count).to eq(3)
     expect(response_body[:data][:attributes][:destination_city]).to be_a(String)

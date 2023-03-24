@@ -5,6 +5,7 @@ class MapService
   end
 
   def self.get_coords(location)
+    
     response = conn.get("/geocoding/v1/address?&location=#{location}")
     get_json(response)
   end
@@ -14,7 +15,7 @@ class MapService
   end
 
   def self.conn
-    Faraday.new('http://open.mapquestapi.com') do |faraday|
+    Faraday.new('https://www.mapquestapi.com') do |faraday|
       faraday.params['key'] = ENV['map_api_key']
     end
   end
